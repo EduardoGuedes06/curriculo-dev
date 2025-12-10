@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Guedes | Senior Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="cv-container">
+        
+        <aside class="sidebar">
+            <div class="profile-header fade-in">
+                <div class="profile-initials">EG</div> 
+                <h1 class="name">Eduardo Guedes</h1>
+                <p class="role">Software Developer | .NET Core | Azure & AWS</p>
+                <div class="location"><i class="fa-solid fa-map-pin"></i> São Paulo, Brazil</div>
+            </div>
+
+            <div class="sidebar-controls no-print fade-in">
+                <button onclick="toggleLanguage()" class="btn-sidebar">
+                    <i class="fa-solid fa-globe"></i> <span id="lang-label">English Version</span>
+                </button>
+                <button onclick="toggleDarkMode()" class="btn-sidebar">
+                    <i class="fa-solid fa-moon" id="dark-mode-icon"></i> <span id="dark-mode-label">Modo Escuro</span>
+                </button>
+                <button onclick="window.print()" class="btn-sidebar">
+                    <i class="fa-solid fa-file-pdf"></i> <span id="pdf-label" class="lang-pt">Salvar PDF</span><span id="pdf-label-en" class="lang-en" style="display:none">Save PDF</span>
+                </button>
+            </div>
+            <div class="separator no-print"></div>
+
+            <div class="sidebar-section fade-in">
+                <h3 class="lang-pt">Contato</h3><h3 class="lang-en" style="display:none">Contact</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:eduardoguedeslibra@gmail.com"><i class="fa-solid fa-envelope"></i> eduardoguedeslibra@gmail.com</a></li>
+                    <li><a href="tel:+5511953078189"><i class="fa-solid fa-phone"></i> +55 (11) 95307-8189</a></li>
+                    <li><a href="https://linkedin.com/in/eduardoguedespereira" target="_blank"><i class="fa-brands fa-linkedin"></i> /in/eduardoguedespereira</a></li>
+                    <li><a href="https://github.com/EduardoGuedes06" target="_blank"><i class="fa-brands fa-github"></i> github.com/EduardoGuedes06</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section fade-in">
+                <h3 class="lang-pt">Back-End & Linguagens</h3><h3 class="lang-en" style="display:none">Back-End & Languages</h3>
+                <div class="tags-container">
+                    <span class="tag">C# / .NET Core</span>
+                    <span class="tag">ASP.NET MVC</span>
+                    <span class="tag">Web API (REST)</span>
+                    <span class="tag">Entity Framework Core</span>
+                    <span class="tag">Dapper</span>
+                    <span class="tag">SignalR</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">SOAP / XML</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section fade-in">
+                <h3 class="lang-pt">Cloud & DevOps</h3><h3 class="lang-en" style="display:none">Cloud & DevOps</h3>
+                <div class="tags-container">
+                    <span class="tag">Azure DevOps (CI/CD)</span>
+                    <span class="tag">Azure Service Bus</span>
+                    <span class="tag">Azure Blob Storage</span>
+                    <span class="tag">AWS (Lambda, ECS)</span>
+                    <span class="tag">Docker / Kubernetes</span>
+                    <span class="tag">Terraform</span>
+                    <span class="tag">GitFlow</span>
+                    <span class="tag">Datadog / CloudWatch</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section fade-in">
+                <h3 class="lang-pt">Front-End & Mobile</h3><h3 class="lang-en" style="display:none">Front-End & Mobile</h3>
+                <div class="tags-container">
+                    <span class="tag">Angular</span>
+                    <span class="tag">React / TypeScript</span>
+                    <span class="tag">Vue.js</span>
+                    <span class="tag">Flutter (Dart)</span>
+                    <span class="tag">HTML5 / CSS3</span>
+                    <span class="tag">Bootstrap</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section fade-in">
+                <h3 class="lang-pt">Dados & Arquitetura</h3><h3 class="lang-en" style="display:none">Data & Architecture</h3>
+                <div class="tags-container">
+                    <span class="tag">SQL Server</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">MongoDB / DynamoDB</span>
+                    <span class="tag">DDD / SOLID</span>
+                    <span class="tag">Microservices</span>
+                    <span class="tag">Event-Driven</span>
+                    <span class="tag">xUnit / SonarQube</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section fade-in">
+                <h3 class="lang-pt">Educação</h3><h3 class="lang-en" style="display:none">Education</h3>
+                
+                <div class="education-item">
+                    <span class="degree lang-pt">Análise e Des. de Sistemas</span>
+                    <span class="degree lang-en" style="display:none">Systems Analysis & Dev.</span>
+                    <span class="school">IFSP - Instituto Federal</span>
+                    <span class="year">2021 - 2023</span>
+                </div>
+                
+                <div class="education-item">
+                    <span class="degree lang-pt">Técnico em Mecatrônica</span>
+                    <span class="degree lang-en" style="display:none">Mechatronics Technician</span>
+                    <span class="school">IFSP - Instituto Federal</span>
+                    <span class="year">2018 - 2020</span>
+                </div>
+
+                <div class="education-item">
+                    <span class="degree lang-pt">Inglês Técnico</span>
+                    <span class="degree lang-en" style="display:none">Technical English</span>
+                    <span class="school">Uni Bragança / ADM</span>
+                    <span class="year">2017 - 2020</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+        <section class="content-section fade-in">
+            <h2 class="section-title">
+                <i class="fa-solid fa-user-tie"></i> 
+                <span class="lang-pt">Resumo Profissional</span><span class="lang-en" style="display:none">Professional Summary</span>
+            </h2>
+            
+            <div class="justified-text lang-pt">
+                <p>Desenvolvedor Fullstack Sênior com mais de 5 anos de experiência na modernização e evolução de sistemas críticos. Especialista na construção de soluções robustas com <strong>.NET/C#</strong> no back-end, aplicando arquitetura MVC, <strong>Domain-Driven Design (DDD)</strong> e princípios SOLID. Proficiente no desenvolvimento de interfaces dinâmicas no front-end com <strong>Angular e TypeScript</strong>, além de Node.js para gestão do ecossistema.</p>
+                
+                <p><strong>Infraestrutura Multi-Cloud:</strong> Atuação híbrida e agnóstica em nuvem, com domínio tanto de <strong>AWS</strong> (Lambda, ECS, SQS/SNS) quanto de <strong>Azure</strong> (Service Bus, Blob Storage, DevOps). Realizo a publicação e manutenção de soluções web distribuídas, garantindo padrões de confiabilidade, escalabilidade e alta disponibilidade em ambos os ambientes.</p>
+                
+                <p><strong>Qualidade e Liderança:</strong> Sólida vivência na automação de pipelines de CI/CD (Azure DevOps e GitFlow), testes unitários (xUnit) e análise de qualidade (Sonar). Com facilidade em comunicação, lidero equipes em projetos desafiadores, articulando processos e unindo pessoas para entregar melhoria contínua e valor real ao negócio.</p>
+            </div>
+
+            <div class="justified-text lang-en" style="display:none">
+                <p>Senior Full Stack Developer with over 5 years of experience in modernizing and evolving critical systems. Specialist in building robust solutions using <strong>.NET/C#</strong> on the back-end, applying MVC architecture, <strong>Domain-Driven Design (DDD)</strong>, and SOLID principles. Proficient in developing dynamic front-end interfaces with <strong>Angular and TypeScript</strong>, as well as Node.js for ecosystem management.</p>
+                
+                <p><strong>Multi-Cloud Infrastructure:</strong> Strong hybrid cloud background, mastering both <strong>AWS</strong> (Lambda, ECS, SQS/SNS) and <strong>Azure</strong> (Service Bus, Blob Storage, DevOps). I deploy and maintain distributed web solutions, ensuring reliability, scalability, and high availability standards across both environments.</p>
+                
+                <p><strong>Quality & Leadership:</strong> Solid experience in CI/CD pipeline automation (Azure DevOps and GitFlow), unit testing (xUnit), and quality analysis (Sonar). With strong communication skills, I lead teams in challenging projects, articulating processes and bridging gaps to deliver continuous improvement and business value.</p>
+            </div>
+        </section>
+
+            <section class="content-section fade-in">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-rocket"></i> 
+                    <span class="lang-pt">Projetos em Destaque</span><span class="lang-en" style="display:none">Featured Projects</span>
+                </h2>
+                
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <h3>Health Time</h3>
+                        <span class="badge dev"><span class="lang-pt">Em Desenvolvimento</span><span class="lang-en" style="display:none">Active Development</span></span>
+                    </div>
+                    
+                    <div class="lang-pt">
+                        <p class="project-role">Autor & Arquiteto de Software | Mar 2025 - Presente</p>
+                        <p>Health Time é uma plataforma web desenvolvida de forma individual para auxiliar escolas de tempo integral no planejamento e organização de suas aulas ao longo do ano letivo. O sistema permite o cadastro de disciplinas, professores, turmas e horários, além de possibilitar o planejamento anual de aulas de maneira visual e prática.</p>
+                        <ul class="dense-list">
+                            <li><strong>Arquitetura:</strong> Padrão MVC (Model-View-Controller) garantindo separação clara de responsabilidades.</li>
+                            <li><strong>Stack:</strong> .NET Framework, C#, Entity Framework Core, Razor, LINQ e MySQL.</li>
+                            <li><strong>Features:</strong> Sistema de Health Check para monitoramento, controle de acesso baseado em papéis (RBAC) e exportação de horários.</li>
+                        </ul>
+                    </div>
+
+                    <div class="lang-en" style="display:none">
+                        <p class="project-role">Author & Software Architect | Mar 2025 - Present</p>
+                        <p>Health Time is a web platform developed individually to assist full-time schools in planning and organizing classes throughout the academic year. The system allows registration of subjects, teachers, classes, and schedules, enabling visual and practical annual planning.</p>
+                        <ul class="dense-list">
+                            <li><strong>Architecture:</strong> MVC pattern ensuring clear separation of concerns.</li>
+                            <li><strong>Stack:</strong> .NET Framework, C#, Entity Framework Core, Razor, LINQ, and MySQL.</li>
+                            <li><strong>Features:</strong> Health Check system for monitoring, Role-Based Access Control (RBAC), and schedule exporting.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Books E-commerce</h3>
+                        <span class="badge proto"><span class="lang-pt">Protótipo</span><span class="lang-en" style="display:none">Prototype</span></span>
+                    </div>
+                    <div class="lang-pt">
+                        <p>Protótipo funcional de um comércio eletrônico focado na venda de livros online. Foco total na experiência do usuário (UX) e responsividade.</p>
+                        <div class="tech-stack-mini">
+                            <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>Modern UI</span>
+                        </div>
+                    </div>
+                    <div class="lang-en" style="display:none">
+                        <p>Functional prototype of an e-commerce platform focused on selling books online. Focus on User Experience (UX) and responsiveness.</p>
+                        <div class="tech-stack-mini">
+                            <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>Modern UI</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section fade-in">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-briefcase"></i> 
+                    <span class="lang-pt">Experiência Profissional</span><span class="lang-en" style="display:none">Work Experience</span>
+                </h2>
+                
+                <div class="timeline">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <h3>Mid-Level Back-End Developer</h3>
+                                <span class="job-date lang-pt">Ago 2025 - Presente</span><span class="job-date lang-en" style="display:none">Aug 2025 - Present</span>
+                            </div>
+                            <span class="company-name">act digital (Alocado: Ouribank)</span>
+                            
+                            <div class="lang-pt">
+                                <p>Atuação em projeto terceiro Ouribank, focado nas integrações de transações financeiras principais do core (PIX e TED). Responsável pela implementação de novos fluxos de validação antifraude, melhoria de performance e segurança dos microsserviços.</p>
+                                <ul class="dense-list">
+                                    <li>Desenvolvimento de soluções distribuídas em Cloud (AWS e <strong>Azure</strong>).</li>
+                                    <li>Monitoramento e observabilidade sistêmica com <strong>Datadog e CloudWatch</strong>.</li>
+                                    <li>Uso de <strong>Terraform e Terragrunt</strong> para deploy de infraestrutura dinâmica e automatizada.</li>
+                                    <li>Foco em performance e resiliência sistêmica, análise de vulnerabilidades e otimização de infraestrutura Docker.</li>
+                                </ul>
+                            </div>
+
+                            <div class="lang-en" style="display:none">
+                                <p>Working on a third-party project for Ouribank, focusing on core financial transaction integrations (PIX and TED). Responsible for implementing new anti-fraud validation flows, enhancing performance, and improving microservice security.</p>
+                                <ul class="dense-list">
+                                    <li>Development of distributed solutions in Cloud (AWS and <strong>Azure</strong>).</li>
+                                    <li>Leveraging <strong>Datadog and CloudWatch</strong> for system monitoring and observability.</li>
+                                    <li>Skilled in using <strong>Terraform and Terragrunt</strong> for dynamic and automated infrastructure deployment.</li>
+                                    <li>Focused on system performance, vulnerability analysis, and Docker-based infrastructure optimization.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <h3 class="lang-pt">Desenvolvedor de Software</h3><h3 class="lang-en" style="display:none">Software Developer</h3>
+                                <span class="job-date lang-pt">Abr 2024 - Jul 2025</span><span class="job-date lang-en" style="display:none">Apr 2024 - Jul 2025</span>
+                            </div>
+                            <span class="company-name">Movere Software</span>
+                            
+                            <div class="lang-pt">
+                                <p>Desenvolvimento e manutenção de um sistema ERP avançado, com foco na implementação de personalizações e sustentação. Atividades incluem a emissão e retransmissão de notas fiscais, automações inteligentes e integrações complexas.</p>
+                                <ul class="dense-list">
+                                    <li>Tecnologias: <strong>ASPX, Angular, VB, C#, JavaScript, TypeScript e Smart Clients</strong>.</li>
+                                    <li>Uso do <strong>SONAR Cube</strong> para garantia da saúde do código e testes na plataforma <strong>Azure DevOps</strong>.</li>
+                                    <li>Desenvolvimento de soluções integradas com PIX, Mercado Livre e processos automatizados.</li>
+                                    <li>Trabalho com regras de negócios complexas e protótipos de sistemas integrados.</li>
+                                </ul>
+                            </div>
+
+                            <div class="lang-en" style="display:none">
+                                <p>Development and maintenance of an advanced ERP system, focusing on implementing customizations and system support. Activities include issuing and reissuing invoices, intelligent automations, and complex integrations.</p>
+                                <ul class="dense-list">
+                                    <li>Technologies: <strong>ASPX, Angular, VB, C#, JavaScript, TypeScript, and Smart Clients</strong>.</li>
+                                    <li>Participation in projects involving the use of <strong>SONAR Cube</strong> for code health monitoring and testing on the <strong>Azure DevOps</strong> platform.</li>
+                                    <li>Development of integrated solutions with PIX, Mercado Livre, and automated processes.</li>
+                                    <li>Working with complex business rules and integrated system prototypes.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <h3>Full-stack Developer</h3>
+                                <span class="job-date lang-pt">Jun 2024 - Fev 2025</span><span class="job-date lang-en" style="display:none">Jun 2024 - Feb 2025</span>
+                            </div>
+                            <span class="company-name">Veendeu</span>
+                            
+                            <div class="lang-pt">
+                                <p>Participação no desenvolvimento de um sistema de e-commerce de produtos digitais utilizando ASPX.</p>
+                                <ul class="dense-list">
+                                    <li>Implementação de chats em tempo real utilizando <strong>SignalR</strong>.</li>
+                                    <li>Gerenciamento de dados com <strong>Entity Framework</strong> e ConnectionFactory (MySQL).</li>
+                                    <li>Agendamento de processos automatizados utilizando o <strong>Schedule Framework</strong>.</li>
+                                    <li>Integração com PIX para transações financeiras e aplicação de arquitetura DDD e MVC.</li>
+                                    <li>Deploy realizado por meio de um servidor Windows Server IIS.</li>
+                                </ul>
+                            </div>
+
+                            <div class="lang-en" style="display:none">
+                                <p>Participation in the development of a digital product e-commerce system using ASPX.</p>
+                                <ul class="dense-list">
+                                    <li>Experience in implementing real-time chats using <strong>SignalR</strong>.</li>
+                                    <li>Data management with <strong>Entity Framework</strong> integrated with ConnectionFactory for MySQL connections.</li>
+                                    <li>Working with automated process scheduling using the <strong>Schedule Framework</strong>.</li>
+                                    <li>Implemented system integration with PIX and applied DDD and MVC architecture.</li>
+                                    <li>The system was deployed using a Windows Server IIS server.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <h3 class="lang-pt">Desenvolvedor FullStack Júnior</h3><h3 class="lang-en" style="display:none">Junior FullStack Developer</h3>
+                                <span class="job-date lang-pt">Mar 2023 - Nov 2023</span><span class="job-date lang-en" style="display:none">Mar 2023 - Nov 2023</span>
+                            </div>
+                            <span class="company-name">Advanced Technologies / ATSD</span>
+                            
+                            <div class="lang-pt">
+                                <p>Desenvolvimento e manutenção de dois sistemas ERP distintos (gestão de serviços e fiscal). Uso de ASPX, integração de APIs REST e SOAP WebServices (com SoapAction) e processamento XML.</p>
+                                <ul class="dense-list">
+                                    <li>Integração com <strong>SEFAZ WebServices</strong> (NF-e, NFS-e, CT-e) municipal, estadual e nacional.</li>
+                                    <li>Implementação de <strong>WebChat integrado com ChatGPT</strong> para suporte automatizado.</li>
+                                    <li>Geração de relatórios com Crystal Reports e iTextSharp, e integração com APIs de mapas.</li>
+                                    <li>Participação na modelagem, implementação e testes utilizando .NET, MVC, SQL Server e jQuery.</li>
+                                </ul>
+                            </div>
+
+                            <div class="lang-en" style="display:none">
+                                <p>Worked on the development and maintenance of two distinct ERP systems (services management and fiscal management). Used ASPX, RESTful APIs, SOAP WebServices (with SoapAction), and XML processing.</p>
+                                <ul class="dense-list">
+                                    <li>Responsible for integrating with <strong>SEFAZ WebServices</strong> (NF-e, NFS-e, CT-e) at all levels.</li>
+                                    <li>Implementation of a <strong>WebChat integrated with ChatGPT</strong> for intelligent user support.</li>
+                                    <li>Report generation utilizing Crystal Reports and iTextSharp, plus map API integrations.</li>
+                                    <li>Active participation in system modeling and testing using .NET, MVC, SQL Server, and jQuery.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="job-header">
+                                <h3 class="lang-pt">Desenvolvedor Backend (Estágio)</h3><h3 class="lang-en" style="display:none">Backend Developer (Intern)</h3>
+                                <span class="job-date lang-pt">Jul 2022 - Mar 2023</span><span class="job-date lang-en" style="display:none">Jul 2022 - Mar 2023</span>
+                            </div>
+                            <span class="company-name">4uCode</span>
+                            
+                            <div class="lang-pt">
+                                <p>Programa de treinamento intensivo diário com foco na formação em .NET.</p>
+                                <ul class="dense-list">
+                                    <li>Estágio focado no desenvolvimento e modelagem de APIs e microsserviços.</li>
+                                    <li>Uso de orientação <strong>DDD, modelagem estratégica e tática</strong>.</li>
+                                    <li>Criação de projetos MVC e conexão com SQL Server, MySQL e MongoDB.</li>
+                                    <li>Desenvolvimento de soluções de alta performance e escalabilidade.</li>
+                                </ul>
+                            </div>
+
+                            <div class="lang-en" style="display:none">
+                                <p>Daily intensive training program focused on .NET development.</p>
+                                <ul class="dense-list">
+                                    <li>Internship focused on developing and modeling APIs and microservices.</li>
+                                    <li>Using <strong>DDD guidance, strategic and tactical modeling</strong>.</li>
+                                    <li>Creating MVC projects and connecting with SQL Server, MySQL, and MongoDB.</li>
+                                    <li>Developing high-performance and scalable solutions.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        let currentLang = 'pt';
+        
+        function updateLangLabel() {
+            const label = document.getElementById('lang-label');
+            label.textContent = currentLang === 'pt' ? "English Version" : "Mudar para Português";
+        }
+
+        function updateDarkModeLabel() {
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            const label = document.getElementById('dark-mode-label');
+
+            if (currentLang === 'pt') {
+                label.textContent = isDarkMode ? "Modo Claro" : "Modo Escuro";
+            } else {
+                label.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
+            }
+        }
+
+        function toggleLanguage() {
+            const enElements = document.querySelectorAll('.lang-en');
+            const ptElements = document.querySelectorAll('.lang-pt');
+            
+            if (currentLang === 'pt') {
+                ptElements.forEach(el => {
+                    el.style.opacity = '0';
+                    setTimeout(() => el.style.display = 'none', 300);
+                });
+                
+                setTimeout(() => {
+                    enElements.forEach(el => {
+                        el.style.display = 'block';
+                        setTimeout(() => el.style.opacity = '1', 50);
+                    });
+                }, 300);
+                
+                currentLang = 'en';
+            } else {
+                enElements.forEach(el => {
+                    el.style.opacity = '0';
+                    setTimeout(() => el.style.display = 'none', 300);
+                });
+                
+                setTimeout(() => {
+                    ptElements.forEach(el => {
+                        el.style.display = 'block';
+                        setTimeout(() => el.style.opacity = '1', 50);
+                    });
+                }, 300);
+                
+                currentLang = 'pt';
+            }
+            updateLangLabel();
+            updateDarkModeLabel();
+        }
+
+        function toggleDarkMode() {
+            const body = document.body;
+            const isDarkMode = body.classList.toggle('dark-mode');
+            const icon = document.getElementById('dark-mode-icon');
+
+            if (isDarkMode) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+            updateDarkModeLabel();
+        }
+
+        function initializeTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const body = document.body;
+            const icon = document.getElementById('dark-mode-icon');
+
+            if (savedTheme === 'dark' || (savedTheme === null && prefersDark)) {
+                body.classList.add('dark-mode');
+                icon.classList.replace('fa-moon', 'fa-sun');
+            }
+            updateDarkModeLabel();
+        }
+        
+
+        document.addEventListener("DOMContentLoaded", function() {
+            initializeTheme();
+            updateLangLabel();
+
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-in, .timeline-item, .project-card');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+</body>
+</html>

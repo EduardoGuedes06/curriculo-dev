@@ -662,8 +662,20 @@
             } else {
                 label.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
             }
+        
         }
-
+        function generateProfessionalPDF() {
+            const wasDark = document.body.classList.contains('dark-mode');
+            document.body.classList.remove('dark-mode');
+            setTimeout(() => {
+                window.print();
+                if (wasDark) {
+                    document.body.classList.add('dark-mode');
+                }
+            }, 100);
+        }
+        
+        
         function toggleLanguage() {
             const enElements = document.querySelectorAll('.lang-en');
             const ptElements = document.querySelectorAll('.lang-pt');
@@ -751,5 +763,9 @@
     </script>
 
 </body>
+<<<<<<< HEAD
 
 </html>
+=======
+</html>
+>>>>>>> 765a5b4043c714e0b276f9fa5ba75fc9adb6202d

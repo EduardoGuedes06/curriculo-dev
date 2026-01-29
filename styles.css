@@ -497,12 +497,72 @@ a:hover {
 }
 
 @media print {
+<<<<<<< HEAD
     .btn-download {
         display: none !important;
     }
 }
 
 @media (max-width: 900px) {
+=======
+
+    @page {
+        size: auto;
+        margin: 0mm;
+    }
+
+    body {
+        background: #fff !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    .no-print, .sidebar-controls {
+        display: none !important;
+    }
+
+    .cv-container {
+        display: grid;
+        grid-template-columns: 280px 1fr; /* Largura fixa para sidebar no print */
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+    }
+
+    .sidebar {
+        background-color: #0f172a !important; /* Mantém o estilo escuro no PDF fica mais premium */
+        color: #fff !important;
+        -webkit-print-color-adjust: exact; /* Força o Chrome a imprimir o fundo */
+        print-color-adjust: exact;
+        padding: 30px 20px;
+    }
+
+    .main-content {
+        padding: 30px;
+        background: #fff !important;
+    }
+
+    /* Evita que um card de projeto ou item da timeline seja cortado ao meio */
+    .project-card, .timeline-item {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-bottom: 20px;
+    }
+
+    /* Ajuste de links para não aparecer a URL ao lado no print */
+    a::after { content: "" !important; }
+    
+    .tag {
+        border: 1px solid #e2e8f0 !important;
+        background: #f8fafc !important;
+        color: #0f172a !important;
+    }
+    body { background: #ffffff !important; }
+    .no-print { display: none !important; }
+    
+>>>>>>> 765a5b4043c714e0b276f9fa5ba75fc9adb6202d
     .cv-container {
         grid-template-columns: 1fr;
         margin: 0;
@@ -520,7 +580,16 @@ a:hover {
         padding: 40px 20px;
     }
 
+<<<<<<< HEAD
     .job-header {
         flex-direction: column;
     }
 }
+=======
+    .main-content { padding: 20px 30px; }
+    
+    a { text-decoration: none; color: #000; }
+    
+    [style*="display: none"] { display: none !important; }
+}
+>>>>>>> 765a5b4043c714e0b276f9fa5ba75fc9adb6202d

@@ -207,8 +207,12 @@
             <section class="content-section fade-in">
                 <h2 class="section-title">
                     <i class="fa-solid fa-user-tie"></i>
-                    <span class="lang-pt">Resumo Profissional</span><span class="lang-en"
-                        style="display:none">Professional Summary</span>
+                        <span class="lang-pt">Resumo Profissional</span>
+                            <span class="lang-en" style="display:none">Professional Summary</span>
+                                <div class="visitor-counter" title="Total de visualizações">
+                                <i class="fa-solid fa-eye"></i>
+                        <span id="count">...</span>
+                    </div>
                 </h2>
 
                 <div class="justified-text lang-pt">
@@ -648,6 +652,17 @@
     <script>
         let currentLang = 'pt';
 
+        async function updateVisitorCounter() {
+            try {
+                const response = await fetch('https://api.counterapi.dev/v1/eduardoguedes06/visits/up');
+                const data = await response.json();
+                document.getElementById('count').innerText = data.count;
+            } catch (error) {
+                console.error('Erro no contador:', error);
+                document.getElementById('count').innerText = "1";
+            }
+        }
+        
         function updateLangLabel() {
             const label = document.getElementById('lang-label');
             label.textContent = currentLang === 'pt' ? "English Version" : "Mudar para Português";
@@ -742,6 +757,7 @@
         }
 
         document.addEventListener("DOMContentLoaded", function () {
+            updateVisitorCounter();
             initializeTheme();
             updateLangLabel();
 
@@ -763,9 +779,4 @@
     </script>
 
 </body>
-<<<<<<< HEAD
-
 </html>
-=======
-</html>
->>>>>>> 765a5b4043c714e0b276f9fa5ba75fc9adb6202d

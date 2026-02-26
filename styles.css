@@ -495,3 +495,35 @@ a:hover {
 .btn-download i {
     font-size: 1.2rem;
 }
+
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.section-header-flex .section-title {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.visitor-counter {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    background: var(--bg-body);
+    padding: 6px 14px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+}
+
+.visitor-counter i {
+    color: var(--accent-color);
+}
